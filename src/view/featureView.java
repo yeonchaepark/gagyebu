@@ -1,11 +1,14 @@
 package view;
 
-import com.shinhands.dto.AccountSummaryDTO;
-import com.shinhands.model.AccountHistoryVO;
+
+
 import java.util.List;
 import java.util.Scanner;
 
-public class AccountView {
+import dto.AccountDTO;
+import vo.AccountHistoryVO;
+
+public class featureView {
     private final Scanner scanner = new Scanner(System.in);
 
     //아 왤케 어렵냐...
@@ -30,7 +33,7 @@ public class AccountView {
         return scanner.nextLine();
     }
 
-    public void printHistories(List<AccountHistoryVO> histories, AccountSummaryDTO summary) {
+    public void printHistories(List<AccountHistoryVO> histories, AccountDTO summary) {
         System.out.println("\n--- [ 거래 내역 목록 ] ---");
         for (AccountHistoryVO h : histories) {
             System.out.printf("[%s] %s : %,d원\n", h.getType(), h.getDescription(), h.getAmount());
