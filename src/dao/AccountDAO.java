@@ -13,9 +13,9 @@ public class AccountDAO {
 
     public void insertHistory(AccountHistoryVO history) {
         database.add(history);
-        if (history.getType().equals("수입")) {
+        if (history.getType().equals("INCOME")) {
             balance += history.getAmount();
-        } else if (history.getType().equals("지출")) {
+        } else if (history.getType().equals("EXPENSE")) {
             balance -= history.getAmount();
         }
     }
