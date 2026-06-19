@@ -16,7 +16,8 @@ public class AccountDAO {
         if (history.getType().equals("수입")) {
             balance += history.getAmount();
         } else if (history.getType().equals("지출")) {
-            balance -= history.getAmount();
+        	// [작업자 B] 실행 가능 로직: 지출할 때마다 수수료 500원 추가 차감
+        	balance = balance - history.getAmount() - 500;
         }
     }
 
