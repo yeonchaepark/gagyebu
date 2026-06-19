@@ -2,6 +2,10 @@ package service;
 
 import java.util.List;
 
+import dao.AccountDAO;
+import dto.AccountDTO;
+import vo.AccountHistoryVO;
+
 public class AccountService {
     private final AccountDAO accountDAO = new AccountDAO();
 
@@ -27,7 +31,7 @@ public class AccountService {
     }
 
     // 계좌 요약 정보 DTO 생성 및 반환
-    public AccountSummaryDTO getAccountSummary() {
-        return new AccountSummaryDTO(accountDAO.selectBalance(), accountDAO.selectAllHistories().size());
+    public AccountDTO getAccount() {
+        return new AccountDTO(accountDAO.selectBalance(), accountDAO.selectAllHistories().size());
     }
 }

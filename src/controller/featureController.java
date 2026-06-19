@@ -1,7 +1,11 @@
 package controller;
+
+import service.AccountService;
+import view.featureView;
+
 //
-import com.shinhands.service.AccountService;
-import com.shinhands.view.AccountView;
+
+
 
 public class featureController {
     private final AccountService service = new AccountService();
@@ -32,7 +36,7 @@ public class featureController {
                     break;
                     
                 case 3: // 팀원 C 작업 영역 (조회)
-                    view.printHistories(service.getHistories(), service.getAccountSummary());
+                    view.printHistories(service.getHistories(), service.getAccount());
                     break;
                     
                 case 4:
