@@ -4,6 +4,8 @@ package dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import vo.AccountHistoryVO;
+
 public class AccountDAO {
     // 가상의 데이터베이스 역할 (메모리 저장)
     private static final List<AccountHistoryVO> database = new ArrayList<>();
