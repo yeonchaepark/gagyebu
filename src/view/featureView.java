@@ -11,7 +11,7 @@ import vo.AccountHistoryVO;
 public class featureView {
     private final Scanner scanner = new Scanner(System.in);
 
-    //sadasdasdasdasdasdasdasd
+    //아 왤케 어렵냐...
     public int showMenu() {
         System.out.println("\n======= 신한 DS 은행 계좌 관리 System =======");
         System.out.println("1. 수입 입력");
